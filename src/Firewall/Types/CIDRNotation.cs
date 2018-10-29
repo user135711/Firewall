@@ -27,7 +27,7 @@ namespace Firewall
             var parts = cidrNotation.Split('/');
 
             if (parts.Length != 2)
-                throw new ArgumentException($"Invlaid CIDR notation: {cidrNotation}.");
+                throw new ArgumentException($"Invalid CIDR notation: {cidrNotation}.");
 
             var isValid = IPAddress.TryParse(parts[0], out var address);
 
